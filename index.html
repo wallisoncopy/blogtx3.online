@@ -1,61 +1,376 @@
 <!DOCTYPE html>
-<html lang="pt-br">
-  <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Cabin:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500;1,600;1,700&family=Dosis:wght@200;300;400;500;600;700;800&family=Oswald:wght@200;300;400;500;600;700&family=Signika:wght@300;400;500;600;700&display=swap" rel="stylesheet">
-
-    <link rel="stylesheet" href="./assets/css/com.css">
-
-    <!-- Título da Página -->
-    <title>Blog</title>
-    
-    <style type="text/css">
-      body {
-        color: white;
-        background-image: url("assets/img/bg.jpeg");
-        background-color: rgba(0, 0, 0, 0.6);
-        background-position: center;
-        background-size: cover;
-        background-attachment: fixed;
-        background-blend-mode: darken;
-      }
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pack Canvas para Nutricionistas</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            background-color: #e0f7e0; /* Fundo verde */
+            color: #333;
+        }
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 20px;
+        }
+        .header {
+            text-align: center;
+            padding: 50px 20px;
+            background-color: #5a9;
+            color: white;
+        }
+        .header h1 {
+            margin: 0;
+            font-size: 3em;
+        }
+        .header p {
+            font-size: 1.2em;
+        }
+        .main-content {
+            text-align: center;
+            padding: 50px 20px;
+        }
+        .main-content h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .main-content p {
+            font-size: 1.2em;
+            margin-bottom: 40px;
+        }
+        .main-content img {
+            max-width: 100%;
+            height: auto;
+            margin: 20px 0;
+        }
+        .buttons {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .button {
+            padding: 15px 25px;
+            font-size: 1.2em;
+            color: white;
+            background-color: #007bff;
+            border: none;
+            border-radius: 5px;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+        .button:hover {
+            background-color: #0056b3;
+        }
+        .image-blocks {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            gap: 20px;
+            padding: 50px 20px;
+            background-color: #f8f8f8;
+        }
+        .image-block {
+            width: 100%;
+            max-width: 300px;
+            text-align: center;
+            margin-bottom: 30px;
+        }
+        .image-block img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        .image-block p {
+            font-size: 1.1em;
+            margin-top: 10px;
+        }
+        .testimonials {
+            background-color: #f8f8f8;
+            padding: 50px 20px;
+            text-align: center;
+        }
+        .testimonials h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+        }
+        .testimonial {
+            max-width: 800px;
+            margin: 0 auto 30px auto;
+            text-align: left;
+            border-left: 4px solid #5a9;
+            padding-left: 20px;
+            position: relative;
+        }
+        .testimonial img {
+            width: 80px;
+            height: 80px;
+            border-radius: 50%;
+            position: absolute;
+            top: 10px;
+            left: -50px;
+        }
+        .testimonial p {
+            font-size: 1.1em;
+            margin-bottom: 15px;
+        }
+        .testimonial .author {
+            font-weight: bold;
+            font-size: 1.2em;
+        }
+        footer {
+            text-align: center;
+            padding: 20px 0;
+            background-color: #333;
+            color: white;
+        }
+        @media (max-width: 768px) {
+            .header h1 {
+                font-size: 2em;
+            }
+            .buttons {
+                flex-direction: column;
+                gap: 10px;
+            }
+            .button {
+                font-size: 1em;
+            }
+            .testimonial img {
+                width: 60px;
+                height: 60px;
+                top: 10px;
+                left: -40px;
+            }
+            .image-blocks {
+                flex-direction: column;
+                align-items: center;
+            }
+            .image-block {
+                max-width: 100%;
+            }
+        }
     </style>
-
-  </head>
-  <body>
-    
-    <header class="py-4">
-      <div class="container">
-        <div class="row justify-content-center">
-          <div class="col-lg-8 text-center">
-            <!-- Imagem Ultrasecreto -->
-            
-
-            <!-- Headline -->
-            <h3 class="my-4"><b></b></h3>
-
-            <!-- VSL -->
-<div id="vid_662cec13edccf7000b6c904d" style="position:relative;width:100%;padding: 56.25% 0 0;"> <img id="thumb_662cec13edccf7000b6c904d" src="https://images.converteai.net/bfceba67-3bd7-4ab3-b95e-6a225bc8c57f/players/662cec13edccf7000b6c904d/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"> <div id="backdrop_662cec13edccf7000b6c904d" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div> </div> <script type="text/javascript" id="scr_662cec13edccf7000b6c904d"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/bfceba67-3bd7-4ab3-b95e-6a225bc8c57f/players/662cec13edccf7000b6c904d/player.js", s.async=!0,document.head.appendChild(s); </script>
-          </div>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <h1>Pack Canvas para Nutricionistas</h1>
+            <p> MÁS DE 300 ANUNCIOS LISTADOS Y TOTALMENTE EDITABLES QUE GENERAN CLIENTES PARA TI EN 15 DÍAS </p>
         </div>
-      </div>
-    </header>
 
-    <script type="text/javascript">
-      setTimeout(() => {document.getElementById("cta1").classList.remove("d-none")}, 1637000); // temporização da Call to Action (em milissegundos)
-    </script>
+        <div id="vid_665b6dee2ab96f000b33fcdb" style="position:relative;width:100%;padding: 56.25% 0 0;"> <img id="thumb_665b6dee2ab96f000b33fcdb" src="https://images.converteai.net/373fdd0d-2334-4f1e-92c3-118564040d7c/players/665b6dee2ab96f000b33fcdb/thumbnail.jpg" style="position:absolute;top:0;left:0;width:100%;height:100%;object-fit:cover;display:block;"> <div id="backdrop_665b6dee2ab96f000b33fcdb" style="position:absolute;top:0;width:100%;height:100%;-webkit-backdrop-filter:blur(5px);backdrop-filter:blur(5px);"></div> </div> <script type="text/javascript" id="scr_665b6dee2ab96f000b33fcdb"> var s=document.createElement("script"); s.src="https://scripts.converteai.net/373fdd0d-2334-4f1e-92c3-118564040d7c/players/665b6dee2ab96f000b33fcdb/player.js", s.async=!0,document.head.appendChild(s); </script> <style> .elementor-element:has(#smartplayer) { width: 100%; } </style>
+        <div class="main-content">
+            <h2>¿Qué incluye el Pack Canva para nutricionistas?</h2>
+            <p><p><strong><span style="color: blue;"><i class="fas fa-stopwatch"></i> GANE TIEMPO</span></strong></p>
+<p>Nuestros modelos están diseñados para facilitar la producción de contenido y optimizar su tiempo, garantizando al mismo tiempo la calidad de sus publicaciones.</p>
 
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
-    <script src="./assets/js/com.js"></script>
-  </body>
+<p><strong><span style="color: green;"><i class="fas fa-bullhorn"></i> DESTÁQUESE EN LAS REDES SOCIALES</span></strong></p>
+<p>No necesita pasar horas pensando en cómo crear sus publicaciones y dónde encontrar las mejores imágenes. En nuestro paquete, tendrá nuestras mejores obras de arte realizadas en Canva. Todo para que su perfil sea aún más profesional, organizado y armonioso.</p>
+
+<p><strong><span style="color: orange;"><i class="fas fa-user-md"></i> CONVIERTA SEGUIDORES EN PACIENTES</span></strong></p>
+<p>La mayoría de las personas pierden mucho tiempo creando una sola obra de arte o incluso pensando qué publicar. Con nuestro Paquete de Nutrición, reducirá su tiempo de creación y podrá dedicar más horas a nutrir y prospectar más pacientes.</p>
+</p>
+            <a href="https://ibb.co/QFzT6ZB">
+    <img src="https://i.ibb.co/xSPBMyv/pack-canva-para-nutricionistas.png" alt="Imagem do Pack Canvas">
+</a>
+
+      <div class="main-content">
+            <h2>Mira la tabla de todo lo que recibirás</h2>
+            <p><table border="1" cellspacing="0" cellpadding="5">
+    <tr>
+        <td colspan="2"><p>El Canva Pack para Nutricionistas contiene más de 300 artes para tu FEED y STORIES, siendo totalmente editable por Canva.</p></td>
+    </tr>
+    <tr>
+        <td><strong>1. ✅ 100 publicaciones para FEED</strong></td>
+        <td><strong>2. ✅ 100 publicaciones para HISTORIA</strong></td>
+    </tr>
+    <tr>
+        <td><strong>3. ✅ 15 publicaciones para STORY de BUENOS DÍAS</strong></td>
+        <td><strong>4. ✅ 8 publicaciones para HISTORIA ANIMADA</strong></td>
+    </tr>
+    <tr>
+        <td><strong>5. ✅ 10 publicaciones CARRUSEL DE ALIMENTACIÓN</strong></td>
+        <td><strong>6. ✅ 12 publicaciones FEED Bienvenido mes a mes</strong></td>
+    </tr>
+    <tr>
+        <td><strong>7. ✅ 5 publicaciones FEED para la celebración de seguidores</strong></td>
+        <td><strong>8. ✅ 19 portadas para DESTACADOS</strong></td>
+    </tr>
+    <tr>
+        <td><strong>9. ✅ 10 portadas para DESTACADOS</strong></td>
+        <td><strong>10. ✅ Modelo de tarjeta digital</strong></td>
+    </tr>
+    <tr>
+        <td><strong>11. ✅ Modelo de Tarjeta Digital - Información de Consulta</strong></td>
+        <td><strong>12. ✅ 2 plantillas de tarjetas de presentación</strong></td>
+    </tr>
+    <tr>
+        <td><strong>13. ✅ 2 plantillas de tarjetas de citas</strong></td>
+        <td><strong>14. ✅ 2 Modelos recetados</strong></td>
+    </tr>
+</table>
+
+<table border="1" cellspacing="0" cellpadding="5">
+    <tr>
+        <td colspan="2"><strong>——————- BONO ——————-</strong></td>
+    </tr>
+    <tr>
+        <td>1. Lista de verificación de publicaciones exitosas</td>
+        <td>2. Feed organizado + Organizador de feeds</td>
+    </tr>
+    <tr>
+        <td>3. Hoja de cálculo de publicación mensual</td>
+        <td>4. Hoja de cálculo de publicaciones semanales</td>
+    </tr>
+    <tr>
+        <td>5. Hoja de cálculo de mi día</td>
+        <td>6. Actualizaciones de por vida</td>
+    </tr>
+    <tr>
+        <td colspan="2">7. Soporte Exclusivo para Estudiantes</td>
+    </tr>
+</table>
+
+<p>Clic ahora en el botón comprar ahora y deja tu agenda llena en los próximos 6 meses solo usando estas publicaciones increíbles usando solo 5 minutos de tu día…</p>
+
+<p>De manera rápida y fácil…</p>
+</p>
+            <a href="https://ibb.co/QFzT6ZB">
+    <img src="https://i.ibb.co/qWz3vJt/2.png" alt="Imagem do Pack Canvas">
+</a>
+
+
+            <div class="buttons">
+                <a href="https://pay.hotmart.com/K81957511C?checkoutMode=10" class="button"style="background-color: orange;">Quiero mi acceso ahora</a>
+
+      <div class="main-content">
+            <h2>Publicaciones diseñadas para atraer clientes</h2>
+            <p>Diseñado para atraer clientes en solo 15 días. Con una variedad de modelos de publicaciones profesionales y cautivadoras, puedes comenzar a aumentar tu base de clientes de manera rápida y efectiva. Permítenos ayudarte a alcanzar tus objetivos comerciales en tiempo récord. ¡Adquiérelo ahora y comienza a cosechar los beneficios de una estrategia de marketing poderosa en solo dos semanas!".</p>
+           <a href="https://ibb.co/QFzT6ZB">
+    <img src="https://i.ibb.co/SfcsRwD/3.png" alt="Imagem do Pack Canvas">
+</a>
+
+
+      <div class="main-content">
+            <h2>GARANTÍA DE 30 DÍAS</h2>
+            <p>"¡Compra con confianza! Ofrecemos una garantía de satisfacción de 30 días. Prueba nuestro Pack Canva para nutricionistas sin riesgos. Si, por alguna razón, no estás completamente satisfecho con tu compra, contáctanos dentro de los 30 días para obtener un reembolso completo. Tu satisfacción es nuestra principal prioridad. ¡No esperes más, comienza a transformar tu presencia en línea hoy mismo!".</p>
+           <a href="https://ibb.co/QFzT6ZB">
+    <img src="https://i.ibb.co/Kx6W7xY/4-1.png" alt="Imagem do Pack Canvas">
+</a>
+
+        </div>
+        <div class="testimonials">
+            <h2>TESTIMONIOS REALES CON PERSONAS REALES</h2>
+            <div class="testimonial">
+                <img src="https://via.placeholder.com/80" alt="Foto de Ana Pereira">
+                <p>"Pack Canvas ha transformado la forma en que trabajo con mis clientes. Las herramientas son intuitivas y sumamente útiles, mi agenda está llena para los próximos 6 meses gracias a estas increíbles publicaciones."</p>
+                <p class="author">- Ana Pereira</p>
+            </div>
+            <div class="testimonial">
+                <img src="https://via.placeholder.com/80" alt="Foto de Carlos Silva">
+                <p>"¡Se lo recomiendo a todos los nutricionistas! Este paquete marcó una gran diferencia en mi práctica diaria."</p>
+                <p class="author">- Carlos Silva</p>
+            </div>
+            <div class="testimonial">
+                <img src="https://via.placeholder.com/80" alt="Foto de Marina Oliveira">
+                <p>"¡Simplemente increible! Herramientas de alta calidad y fáciles de usar. Mi productividad ha aumentado mucho aquí en la clínica.."</p>
+                <p class="author">- Marina Oliveira</p>
+            </div>
+        </div>
+
+        <a href="https://pay.hotmart.com/K81957511C?checkoutMode=10" class="button"style="background-color: orange;">Quiero mi acceso ahora por solo $7.00</a>
+    </div>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Preguntas Frecuentes - Compras en Internet</title>
+    <style>
+        .accordion {
+            background-color: #f9f9f9;
+            color: #333;
+            cursor: pointer;
+            padding: 18px;
+            width: 100%;
+            border: none;
+            text-align: left;
+            outline: none;
+            font-size: 15px;
+            transition: 0.4s;
+            border-bottom: 1px solid #ddd;
+        }
+
+        .panel {
+            padding: 0 18px;
+            display: none;
+            background-color: white;
+            overflow: hidden;
+            border-bottom: 1px solid #ddd;
+        }
+    </style>
+</head>
+<body>
+
+<h1>Preguntas Frecuentes - Compras en Internet (Hotmart)</h1>
+
+<button class="accordion">1. ¿Cómo puedo comprar el Pack Canva para Nutricionistas?</button>
+<div class="panel">
+    <p>Para comprar el Pack Canva, simplemente haz clic en el botón de compra proporcionado en esta página. Serás redirigido a la plataforma Hotmart, donde podrás completar la compra de forma segura y rápida.</p>
+</div>
+
+<button class="accordion">2. ¿Qué formas de pago se aceptan?</button>
+<div class="panel">
+    <p>Hotmart acepta diversas formas de pago, incluyendo tarjeta de crédito, boleto bancario, PayPal, entre otras. Durante el proceso de compra, podrás elegir la opción que mejor se adapte a tus necesidades.</p>
+</div>
+
+<button class="accordion">3. ¿Cuánto tiempo se tarda en recibir mi acceso después de la compra?</button>
+<div class="panel">
+    <p>Después de confirmar el pago, recibirás tu acceso al Pack Canva para Nutricionistas de inmediato. Hotmart enviará un correo electrónico con las instrucciones de acceso, incluyendo enlaces e información de inicio de sesión.</p>
+</div>
+
+<button class="accordion">4. ¿Puedo acceder al Pack Canva en más de un dispositivo?</button>
+<div class="panel">
+    <p>Sí, puedes acceder al Pack Canva en tantos dispositivos como desees. Simplemente utiliza tus credenciales de inicio de sesión en cada dispositivo para acceder al contenido.</p>
+</div>
+
+<button class="accordion">5. ¿Qué sucede si tengo problemas con la compra o el acceso?</button>
+<div class="panel">
+    <p>En caso de cualquier problema con la compra o acceso al Pack Canva, ponte en contacto con el soporte de Hotmart. Están disponibles para ayudar y resolver cualquier problema que pueda surgir.</p>
+</div>
+
+<script>
+    var acc = document.getElementsByClassName("accordion");
+    var i;
+
+    for (i = 0; i < acc.length; i++) {
+        acc[i].addEventListener("click", function() {
+            this.classList.toggle("active");
+            var panel = this.nextElementSibling;
+            if (panel.style.display === "block") {
+                panel.style.display = "none";
+            } else {
+                panel.style.display = "block";
+            }
+        });
+    }
+</script>
+
+</body>
+</html>
+
+    <footer>
+        <p>&copy; 2024 Tx3Marketing. Todos los derechos reservados.</p>
+        <p>Contacto: contato@Tx3marketing.com |</p>
+    </footer>
+</body>
 </html>
 
 <!-- Meta Pixel Code -->
@@ -68,10 +383,12 @@ n.queue=[];t=b.createElement(e);t.async=!0;
 t.src=v;s=b.getElementsByTagName(e)[0];
 s.parentNode.insertBefore(t,s)}(window, document,'script',
 'https://connect.facebook.net/en_US/fbevents.js');
-fbq('init', ' 962284278384432');
+fbq('init', '287459094460019');
 fbq('track', 'PageView');
 </script>
 <noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1537763390470174&ev=PageView&noscript=1"
+src="https://www.facebook.com/tr?id=287459094460019&ev=PageView&noscript=1"
 /></noscript>
 <!-- End Meta Pixel Code -->
+       
+
