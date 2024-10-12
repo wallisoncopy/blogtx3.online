@@ -1,23 +1,45 @@
-
-TITLE: 
-Author - 100% Fully Responsive One Page HTML5 Template
-
-AUTHOR:
-DESIGNED & DEVELOPED by FreeHTML5.co
-
-Website: http://freehtml5.co/
-Twitter: http://twitter.com/fh5co
-Facebook: http://facebook.com/fh5co
+Spectral by HTML5 UP
+html5up.net | @ajlkn
+Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 
 
-CREDITS:
+A big, modern, blocky affair with a mobile-style menu, fully responsive styling,
+and an assortment of pre-styled elements. So, pretty much what you were expecting
+-- except, of course, for how it's put together, specifically:
 
-jQuery
-http://jquery.com/
+- It's built with components from my Responsive Tools project.
 
-Slick Slider
-http://kenwheeler.github.io/slick/
+- It uses flexbox, which eliminates all kinds of terrible hacks and clunky layout
+  stopgaps (like CSS grid systems).
 
-Demo Images:
-http://unsplash.com
+- It uses Sass* a lot more intelligently, thanks in part to several new mixins
+  and functions I've been working on (as well as a few by @HugoGiraudel).
 
+  (* = still entirely optional if you prefer vanilla CSS :)
+
+- A ton of other stuff.
+
+In short, Spectral's the culmination of several new things I'm working on/trying out,
+so please, let me know what you think :)
+
+Demo images* courtesy of Unsplash, a radtastic collection of CC0 (public domain) images
+you can use for pretty much whatever.
+
+(* = not included)
+
+AJ
+aj@lkn.io | @ajlkn
+
+
+Credits:
+
+	Demo Images:
+		Unsplash (unsplash.com)
+
+	Icons:
+		Font Awesome (fontawesome.io)
+
+	Other:
+		jQuery (jquery.com)
+		Scrollex (github.com/ajlkn/jquery.scrollex)
+		Responsive Tools (github.com/ajlkn/responsive-tools)
